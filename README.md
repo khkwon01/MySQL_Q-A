@@ -16,9 +16,13 @@
   - read load balancer 설정
     mysql mds의 read load balancer에는 위에 분산 알고리즘을 제외하고는 다른 분산 알고리즘은 지원하지 않음
   - read replica 모니터링
-    '''
-    
-    '''
+    ```
+    show replica status\G
+    select * from performance_schema.replication_connection_status
+    select * from performance_schema.replication_applier_status_by_coordinator
+    select * from performance_schema.replication_applier_status_by_worker
+    select * from performance_schmea.error_log
+    ```
 
 ### 2) Maintenance 
 - MySQL upgrade시 알림 설정   
