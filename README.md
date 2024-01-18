@@ -40,5 +40,5 @@
         ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/74a5e6d2-396d-4632-bcd2-2f3f4cf922ed)
     - Event 설정후 MySQL 시스템 upgrade시 알림 내용    
       위에 upgrade 알림 설정후 MySQL 시스템에 설정된 Maintenance 시점에 upgrade가 발생할 경우 아래와 같이 알림이 옴   
-      (상황에 따라 다르겠지만, 메일 알림 기준으로 maintenance 시간은 대략 15분 내외 소요됨)  
+      (상황에 따라 다르겠지만, 메일 알림 기준으로 maintenance 시간은 대략 20분 내외 소요됨)  
       ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/51a270b6-ad96-47eb-8e39-cefb77167473)
