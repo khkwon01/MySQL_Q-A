@@ -20,8 +20,8 @@
         ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/9d2749f4-a1fc-49d5-a7de-bc5226cfe391)      
       - 테스트로 events rule 만들어 놓은 항목
         ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/22e6b0fe-9985-4b1a-bffe-12f6a2c943c4)
-      - 아래와 같이 upgrade 시작과 끝에 해당 하는 evnet 설정하고 notification를 e-mail 선택
-        (upgrade 시작 : MySQL - Upgrade DB System Begin, upgrade 종료 :  Upgrade DB System End) 
+      - 아래와 같이 upgrade 시작과 끝에 해당 하는 evnet 설정하고 notification를 e-mail 선택    
+        (upgrade 시작 : MySQL - Upgrade DB System Begin, upgrade 종료 :  Upgrade DB System End)    
         ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/74a5e6d2-396d-4632-bcd2-2f3f4cf922ed)
     - Event 설정후 MySQL 시스템 upgrade시 알림 내용    
       위에 upgrade 알림 설정후 MySQL 시스템에 설정된 Maintenance 시점에 upgrade가 발생할 경우 아래와 같이 알림이 옴
