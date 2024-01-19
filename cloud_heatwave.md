@@ -1,7 +1,7 @@
 ## 1. MySQL HeatWave 
 ### 1) Shape (리소스)
 - HeatWave에서 제공하는 MySQL shape
-  - https://github.com/khkwon01/MySQL_Q-A/blob/main/cloud_heatwave.md
+  - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
 
 ### 2) replicaton 구성
 - upgrade시 rollback용으로 하위버전 replication 구성 (MySQL 5.7 --> MySQL 8.0 (MDS) --> MySQL 5.7)
