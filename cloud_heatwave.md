@@ -1,5 +1,9 @@
 ## 1. MySQL HeatWave 
-### 1) replicaton 구성
+### 1) Shape (리소스)
+- HeatWave에서 제공하는 MySQL shape
+  - https://github.com/khkwon01/MySQL_Q-A/blob/main/cloud_heatwave.md
+
+### 2) replicaton 구성
 - upgrade시 rollback용으로 하위버전 replication 구성 (MySQL 5.7 --> MySQL 8.0 (MDS) --> MySQL 5.7)
   - replication 오류 사항
     <img width="1143" alt="image" src="https://github.com/khkwon01/MySQL_Q-A/assets/8789421/bbf44d20-c475-4cc8-bf82-16af38dc229c">
@@ -22,7 +26,7 @@
     select * from performance_schmea.error_log
     ```
 
-### 2) Maintenance 
+### 3) Maintenance 
 - MySQL upgrade시 알림 설정   
   현재 시스템 알림이 없는데, 아래 설정을 통해 maintenance 시작과 종료시 알람을 직접 받을 수가 있음
   - 설정 메뉴
