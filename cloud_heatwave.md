@@ -3,7 +3,11 @@
 - HeatWave에서 제공하는 MySQL shape
   - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
 
-### 2) replicaton 구성
+### 2) replicaton (channel) 구성
+- channel 구성시 binary log expire 설정
+  - MDS는 기본적으로 binary log expire 1시간 설정되어 있어, MDS를 소스로 설정시 충분한 시간 확보 필요
+    * binlog_expire_logs_seconds 
+
 - upgrade시 rollback용으로 하위버전 replication 구성 (MySQL 5.7 --> MySQL 8.0 (MDS) --> MySQL 5.7)
   - replication 오류 사항
     <img width="1143" alt="image" src="https://github.com/khkwon01/MySQL_Q-A/assets/8789421/bbf44d20-c475-4cc8-bf82-16af38dc229c">
