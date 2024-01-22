@@ -48,3 +48,11 @@
       위에 upgrade 알림 설정후 MySQL 시스템에 설정된 Maintenance 시점에 upgrade가 발생할 경우 아래와 같이 알림이 옴   
       (상황에 따라 다르겠지만, 메일 알림 기준으로 maintenance 시간은 대략 20분 내외 소요됨)  
       ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/51a270b6-ad96-47eb-8e39-cefb77167473)
+- (참고) 알람 수신을 위한 notification topic 생성 방법
+  - Notification 서비스를 하나 만들고 구독에 Email 구독 추가하시면 됩니다.
+  - Subscription Topic  리스트박스에 위에서 만든 Notification Topic명을 선택해주고,    
+    구독(Subscriptions) 화면에 고객분 이메일을 추가하시면 됩니다. 이 때 해당 email 로 Confirm 메일이 발송됩니다.    
+    해당 메일로 들어가셔서 링크를 클릭하셔서 confirm 하셔야 Ative 상태가 됩니다.
+    ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/6c51a0a3-dcac-4656-810e-dd7667c83842)
+
+
