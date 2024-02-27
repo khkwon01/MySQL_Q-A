@@ -1,4 +1,4 @@
-## 1. MySQL HeatWave 
+## 1. MySQL & MySQL HeatWave(Cloud) 
 ### 1) shape (리소스, Cloud only)
 - HeatWave에서 제공하는 MySQL shape
   - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
