@@ -4,7 +4,7 @@
   - https://docs.oracle.com/en-us/iaas/mysql-database/doc/supported-shapes.html
 
 ### 2) replicaton (channel) 구성
-- channel 구성시 binary log expire 설정
+- channel 구성시 binary log expire 설정 (* Cloud only)
   - MDS는 기본적으로 binary log expire 1시간 설정되어 있어, MDS를 소스로 설정시 충분한 시간 확보 필요
     * binlog_expire_logs_seconds 
 
