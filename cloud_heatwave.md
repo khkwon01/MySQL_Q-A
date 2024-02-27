@@ -29,6 +29,13 @@
     select * from performance_schema.replication_applier_status_by_worker
     select * from performance_schmea.error_log
     ```
+- 줄지 않고 늘어나는 연동(replication lag) 시간
+  - source와 target간 데이터 export와 load 시간을 줄여서 변동분 반영 시간 최소화   
+    데이터 export와 load시 mysql-shell에 multi-thread, chunk 사이즈를 조정, consistent option false 등
+  - source(master) binlog file 및 position를 확인하여 mysqlbinlog를 사용하여 중단 시점에 SQL 확인    
+    또는 replica에서 show processlist를 통해 문제가 되는 쿼리와 테이블 확인   
+  - 문제가 되는 쿼리 및 테이블가 확인될 경우 source와 target간 실행 계획이 동일한지 확인    
+    또는 source 테이블에 FK등이 있는지 체크
 
 ### 3) Maintenance 
 - MySQL upgrade시 알림 설정   
@@ -55,4 +62,7 @@
     해당 메일로 들어가셔서 링크를 클릭하셔서 confirm 하셔야 Ative 상태가 됩니다.
     ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/6c51a0a3-dcac-4656-810e-dd7667c83842)
 
-
+### 4) Character set 또는 Collation
+- source와 target간 table에 default character set 또는 collation이 틀려서 아래와 같은 오류 발생 가능
+  - Illegal mix of collation (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation    
+    source와 target간 전체 DB와 테이블, 컬럼간 character set 또는 collation를 맞추어서 반영하는게 필요함
