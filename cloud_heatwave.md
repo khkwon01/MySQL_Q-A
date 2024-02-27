@@ -21,7 +21,7 @@
     ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/a6a7bca7-d5fb-4d13-b202-988c157075c6)
   - read load balancer 설정
     mysql mds의 read load balancer에는 위에 분산 알고리즘을 제외하고는 다른 분산 알고리즘은 지원하지 않음
-  - read replica 모니터링
+  - read replica 모니터링 (*Software 방식도 동일)
     ```
     show replica status\G
     select * from performance_schema.replication_connection_status
@@ -38,7 +38,7 @@
     또는 source 테이블에 FK등이 있는지 체크
 
 ### 3) Maintenance 
-- MySQL upgrade시 알림 설정   
+- MySQL upgrade시 알림 설정 (*Cloud only)
   현재 시스템 알림이 없는데, 아래 설정을 통해 maintenance 시작과 종료시 알람을 직접 받을 수가 있음
   - 설정 메뉴
     - Observability & Management 항목 --> Events Service --> Rules 에서 upgrade rule 설정
