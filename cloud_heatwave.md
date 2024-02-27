@@ -38,7 +38,7 @@
     또는 source 테이블에 FK등이 있는지 체크
 
 ### 3) Maintenance 
-- MySQL upgrade시 알림 설정 (*Cloud only)
+- MySQL upgrade시 알림 설정 (*Cloud only)    
   현재 시스템 알림이 없는데, 아래 설정을 통해 maintenance 시작과 종료시 알람을 직접 받을 수가 있음
   - 설정 메뉴
     - Observability & Management 항목 --> Events Service --> Rules 에서 upgrade rule 설정
