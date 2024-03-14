@@ -36,7 +36,7 @@
     또는 replica에서 show processlist를 통해 문제가 되는 쿼리와 테이블 확인   
   - 문제가 되는 쿼리 및 테이블가 확인될 경우 source와 target간 실행 계획이 동일한지 확인    
     또는 source 테이블에 FK등이 있는지 체크
-- MySQL router(8.2.0 버전이상)사용하여 read/writer 분리
+- MySQL router(8.2.0 버전이상)사용하여 MDS에 read/writer 분리
   - 기술 블로그 : https://blogs.oracle.com/mysql/post/wordpress-in-oci-with-mysql-heatwave-read-replicas-and-mysql-router-rw-splitting    
   ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/5d35a689-9fb7-47ee-b22a-bb67ecf3e984)
   - 구성 방법
