@@ -39,7 +39,25 @@
 - MySQL router(8.2.0 버전이상)사용하여 read/writer 분리
   - 기술 블로그 : https://blogs.oracle.com/mysql/post/wordpress-in-oci-with-mysql-heatwave-read-replicas-and-mysql-router-rw-splitting    
   ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/5d35a689-9fb7-47ee-b22a-bb67ecf3e984)
+  - 구성 방법
+    - wget https://lefred.be/wp-content/uploads/2023/12/router_metadata.zip
+    - unzip router_metadata.zip
+    - mysqlsh --sql admin@10.0.1.191 < router_metadata.sql  (마스터, 계정이 admin이 아니면 수정필요)
+    - mysqlsh --sql admin@10.0.1.191
+    ```
+    use mysql_innodb_cluster_metadata
+    update instances set address="10.0.1.191:3306", mysql_server_uuid=@@server_uuid, instance_name=@@hostname where instance_id=1;
+    update instances set addresses = '{"mysqlX": "10.0.1.191:33060", "mysqlClassic": "10.0.1.191:3306"}' where instance_id=1;
 
+    update instances set address="10.0.1.16:3306", mysql_server_uuid="86b0b07b-98d2-11ee-9c5a-020017241124", 
+    instance_name="read_replica_load_balancer" where instance_id=2;
+    update instances set addresses = '{"mysqlX": "10.0.1.16:33060", "mysqlClassic": "10.0.1.16:3306"}' where instance_id=2;
+    ```
+    - mysql router bootstrap 구성
+      - mysqlrouter --bootstrap admin@10.0.1.191 --user=mysqlrouter     
+      - /etc/mysqlrouter/mysqlrouter.conf 파일내에 r/w 포트를 6450에서 3306으로 수정
+      ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/8186e2b3-6936-431a-93a7-20684fc3fd14)
+      - systemclt start mysqlrouter.service
 
 ### 3) Maintenance 
 - MySQL upgrade시 알림 설정 (*Cloud only)    
