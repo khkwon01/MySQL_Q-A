@@ -46,6 +46,7 @@
     - mysqlsh --sql admin@10.0.1.191
     ```
     use mysql_innodb_cluster_metadata
+    # 10.0.1.191는 테스트용 source, 10.0.1.16는 테스트용 read load balanacer이고 mysql_server_uuid는 read중 1대 uuid, 구성환경에 따라 변경해야함
     update instances set address="10.0.1.191:3306", mysql_server_uuid=@@server_uuid, instance_name=@@hostname where instance_id=1;
     update instances set addresses = '{"mysqlX": "10.0.1.191:33060", "mysqlClassic": "10.0.1.191:3306"}' where instance_id=1;
 
