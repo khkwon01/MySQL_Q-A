@@ -57,7 +57,7 @@
       - mysqlrouter --bootstrap admin@10.0.1.191 --user=mysqlrouter     
       - /etc/mysqlrouter/mysqlrouter.conf 파일내에 r/w 포트를 6450에서 3306으로 수정
       ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/8186e2b3-6936-431a-93a7-20684fc3fd14)
-      - systemclt start mysqlrouter.service
+      - systemctl start mysqlrouter.service
 
 ### 3) Maintenance 
 - MySQL upgrade시 알림 설정 (*Cloud only)    
