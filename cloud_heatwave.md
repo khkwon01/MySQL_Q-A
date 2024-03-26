@@ -58,6 +58,10 @@
       - /etc/mysqlrouter/mysqlrouter.conf 파일내에 r/w 포트를 6450에서 3306으로 수정
       ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/8186e2b3-6936-431a-93a7-20684fc3fd14)
       - systemctl start mysqlrouter.service
+    - 서비스 사용
+      - read / write : mysql -u admin -p -h 127.0.0.1 -P 6446
+      - read         : mysql -u admin -p -h 127.0.0.1 -P 6447
+      - auto (auto classification) : mysql -u admin -p -h 127.0.0.1 (default 3306)
 
 ### 3) Maintenance 
 - MySQL upgrade시 알림 설정 (*Cloud only)    
