@@ -13,7 +13,7 @@
     <img width="1143" alt="image" src="https://github.com/khkwon01/MySQL_Q-A/assets/8789421/bbf44d20-c475-4cc8-bf82-16af38dc229c">
   - 대응 방안    
     기본적으로 상위 버전(8.0)에서 하위 버전(5.7)로 replication은 권장하지 않습니다. 왜냐하면 8.0에 새로운 기능과 character set등이 포함 되어 있어
-    관련 내용을 binlog 기록후 5.7에서 사용시 replication에 오류가 발생
+    관련 내용을 binlog 기록후 5.7에서 사용시 replication에 오류가 발생  (doc 2748591.1) 
 - MySQL MDS Read replica 연결 분산
   - read load balancer 사용시 분산방법     
     read load balancer를 사용하여 read replica 연결시에는 5-Tuple hash 방식으로 client ip, port, dest ip, port, protocal 5가지를
