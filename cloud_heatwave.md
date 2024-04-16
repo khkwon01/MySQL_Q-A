@@ -65,6 +65,14 @@
       - auto (auto classification) : mysql -u admin -p -h 127.0.0.1 (default 3306)
 
 ### 3) Maintenance 
+- MySQL maintenance schedule 알람 확인 및 설정 (*Cloud only)
+  - 확인 메뉴
+    - 알람 내용 확인 : Announcements --> 왼쪽 Announcements --> 오른쪽 All actions
+      - ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/055f9668-ab93-49c5-8800-a212d853e00b)
+    - 수신 알람 설정 : Announcements --> 왼쪽 Subscriptions --> create announcement subscription    
+      아래 cloud상에서 등록되는 알람을 수신 받기 위해 내용을 설정 (예. 수신 방법은 메일등으로 설정)
+      - ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/f5ca29b3-8b87-4156-a4b0-ffc58b5c2a5a)
+
 - MySQL upgrade시 알림 설정 (*Cloud only)    
   현재 시스템 알림이 없는데, 아래 설정을 통해 maintenance 시작과 종료시 알람을 직접 받을 수가 있음
   - 설정 메뉴
