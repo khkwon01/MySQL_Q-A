@@ -101,3 +101,9 @@
 - source와 target간 table에 default character set 또는 collation이 틀려서 아래와 같은 오류 발생 가능
   - Illegal mix of collation (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation    
     source와 target간 전체 DB와 테이블, 컬럼간 character set 또는 collation를 맞추어서 반영하는게 필요함
+
+### 99) 기타
+- MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
+  - MySQL 8.0.36 이하 버전 포함 MySQL 8.0 버전에 대해 최대 64회 online 변경 가능 
+    - 1개 테이블에 대해서 64회 온라인 변경을 수행하고 난후, offline alter 작업 또는 optimize 작업등을 통해 reset 가능
+  
