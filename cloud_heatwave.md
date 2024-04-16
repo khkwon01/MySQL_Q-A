@@ -69,7 +69,7 @@
   - 확인 메뉴
     - 알람 내용 확인 : Announcements --> 왼쪽 Announcements --> 오른쪽 All actions
       - ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/055f9668-ab93-49c5-8800-a212d853e00b)
-    - 수신 알람 설정 : Announcements --> 왼쪽 Subscriptions --> create announcement subscription    
+    - 알람 외부 수신 설정 : Announcements --> 왼쪽 Subscriptions --> create announcement subscription    
       아래 cloud상에서 등록되는 알람을 수신 받기 위해 내용을 설정 (예. 수신 방법은 메일등으로 설정)
       - ![image](https://github.com/khkwon01/MySQL_Q-A/assets/8789421/f5ca29b3-8b87-4156-a4b0-ffc58b5c2a5a)
 
