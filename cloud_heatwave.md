@@ -106,4 +106,18 @@
 - MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
   - MySQL 8.0.36 이하 버전 포함 MySQL 8.0 버전에 대해 최대 64회 online 변경 가능 
     - 1개 테이블에 대해서 64회 온라인 변경을 수행하고 난후, offline alter 작업 또는 optimize 작업등을 통해 reset 가능
+- MDS(Heatwave)에서 binlog 추출후 분석
+  - 특정 MDS(10.0.20.47)로부터 binlog 파일 추출
+    - MDS로부터 가져올 binlog 파일 확인
+      ```
+      show binary logs
+      ```
+    - binlog 파일 추출
+      ```
+      mysqlbinlog --read-from-remote-server --host=10.0.20.47 --user admin -p --raw --result-file=binary-log.000033 binary-log.000033
+      ```
+    - binlog내 SQL 분석
+      ```
+      mysqlbinlog -v --base64-output=DECODE-ROWS binary-log.000033binary-log.000033 > ext_sql.sql
+      ```
   
