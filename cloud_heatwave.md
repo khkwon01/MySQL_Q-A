@@ -102,6 +102,11 @@
   - Illegal mix of collation (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,IMPLICIT) for operation    
     source와 target간 전체 DB와 테이블, 컬럼간 character set 또는 collation를 맞추어서 반영하는게 필요함
 
+### 5) DB monitoring
+- 만들어 데이터베이스 세부항목에서 아래 `Database Management: Details` 항목을 클릭하면 세부 DB 모니터링 화면으로 전환
+  ![image](https://github.com/user-attachments/assets/078ab364-6d0d-4895-85a0-590b1e800de3)
+  - 기본 메트릭 및 확장 사항들을 확인 할 수 있으며, `Performance Hub` 클릭시 DB 측면에 세부 사항을 확인 할 수 있음
+
 ### 99) 기타
 - MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
   - MySQL 8.0.36 이하 버전 포함 MySQL 8.0 버전에 대해 최대 64회 online 변경 가능 
