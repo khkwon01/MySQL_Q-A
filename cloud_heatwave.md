@@ -107,6 +107,11 @@
   ![image](https://github.com/user-attachments/assets/078ab364-6d0d-4895-85a0-590b1e800de3)
   - 기본 메트릭 및 확장 사항들을 확인 할 수 있으며, `Performance Hub` 클릭시 DB 측면에 세부 사항을 확인 할 수 있음
 
+### 6) 사용 Privileges
+
+![image](https://github.com/user-attachments/assets/c891b83d-e810-413e-88ec-44750d9c80c3)
+
+
 ### 99) 기타
 - MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
   - MySQL 8.0.36 이하 버전 포함 MySQL 8.0 버전에 대해 최대 64회 online 변경 가능 
