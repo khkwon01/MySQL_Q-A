@@ -111,6 +111,9 @@
 
 ![image](https://github.com/user-attachments/assets/c891b83d-e810-413e-88ec-44750d9c80c3)
 
+### 7) HA 서비스 동작 방식
+
+https://blogs.oracle.com/mysql/post/changing-heatwave-mysql-shape-and-configuration-with-minimal-downtime
 
 ### 99) 기타
 - MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
