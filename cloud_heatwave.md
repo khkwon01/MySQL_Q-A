@@ -112,8 +112,23 @@
 ![image](https://github.com/user-attachments/assets/c891b83d-e810-413e-88ec-44750d9c80c3)
 
 ### 7) HA 서비스 동작 방식
+- HA 동작 flow 
+  https://blogs.oracle.com/mysql/post/changing-heatwave-mysql-shape-and-configuration-with-minimal-downtime
+- HA instance 상태 확인
+  ```
+  select mem.member_id,
+         mem.member_host,
+         mem.member_state,
+         mem.member_role,
+         stat.TRANSACTIONS_COMMITTED_ALL_MEMBERS,
+         stat.COUNT_TRANSACTIONS_REMOTE_IN_APPLIER_QUEUE
+  from
+         performance_schema.replication_group_members mem
+         inner join performance_schema.replication_group_member_stats stat on mem.member_id = stat.member_id
+  ```
+  ![image](https://github.com/user-attachments/assets/947bd72b-73ca-40bb-ae76-658c3a5696f3)
 
-https://blogs.oracle.com/mysql/post/changing-heatwave-mysql-shape-and-configuration-with-minimal-downtime
+
 
 ### 99) 기타
 - MySQL table online alter 횟수 제한 (ex, 명령어 : ALTER TABLE ... ALGORITHM=INSTANT)
