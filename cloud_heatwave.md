@@ -159,8 +159,10 @@
   ```
   
 ### 7) HA 서비스 동작 방식
-- HA 동작 flow 
+- HA 동작 flow
+  
   https://blogs.oracle.com/mysql/post/changing-heatwave-mysql-shape-and-configuration-with-minimal-downtime
+  
 - HA instance 상태 확인
   ```
   select mem.member_id,
