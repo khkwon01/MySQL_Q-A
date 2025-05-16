@@ -198,4 +198,6 @@
       mysqlbinlog -v --base64-output=DECODE-ROWS binary-log.000033binary-log.000033 > ext_sql.sql
       ```
 - MySQL 버전별 차이 내용 확인
-  -   https://mysql-params.tmtms.net/variable/?vers=8.0.37,8.4.0&plugin=true
+  - https://mysql-params.tmtms.net/variable/?vers=8.0.37,8.4.0&plugin=true
+- Heatwave와 타 서비스간 Performance 비교
+  - https://www.oracle.com/heatwave/performance-benchmarks/#heatwave-on-oci
